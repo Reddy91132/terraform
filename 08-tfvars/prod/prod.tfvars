@@ -5,5 +5,7 @@ instances = {
 }
 
 tags = {
-    environment = "prod"
+    Environment = "prod"
 }
+
+environment = "prod"
