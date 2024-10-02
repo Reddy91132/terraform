@@ -1,48 +1,43 @@
 variable "project_name" {
     default = "expense"
-
 }
 
 variable "environment" {
     default = "dev"
-
 }
 
 variable "common_tags" {
     default = {
         Project = "expense"
         Terraform = "true"
-        environment = "dev"
-    }
-} 
-
-variable "mysql_sg_tags" {
-    default = {
-        component = "mysql"
+        Environment = "dev"
     }
 }
 
-variable "backend_sg_tags" {
+variable "mysql_tags" {
     default = {
-        component = "backend"
+        Component = "mysql"
     }
 }
 
-
-variable "frontend_sg_tags" {
+variable "backend_tags" {
     default = {
-        component = "frontend"
+        Component = "backend"
     }
 }
 
-variable "bastion_sg_tags" {
+variable "frontend_tags" {
     default = {
-        component = "bastion"
+        Component = "frontend"
     }
 }
 
-variable "ansible_sg_tags" {
+variable "ansible_tags" {
     default = {
         Component = "ansible"
     }
+}
+
+variable "zone_name" {
+    default = "reddy81s.online"
 }
